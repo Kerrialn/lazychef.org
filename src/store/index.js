@@ -96,6 +96,108 @@ export default new Vuex.Store({
         ],
         isPublished: true,
       },
+      {
+        id: 2,
+        slug: "steamed-fish",
+        title: "Steamed fish & vegetable rush",
+        description: "",
+        duration: 20,
+        image: require('.././assets/images/steamed-fish/1.jpg'),
+        images:[
+          {
+            id: 1,
+            src: require('.././assets/images/steamed-fish/1.jpg'),
+          },
+          {
+            id: 2,
+            src: require('.././assets/images/steamed-fish/2.jpg'),
+          }
+        ],
+        serverings: 2,
+        ingredients:[
+          {
+            id: 1,
+            title: 'fillet of salmon (but nearly any fish fillet will work)',
+            quantity: 400,
+            measurement: 'g',
+            isComplete: false
+          },
+          {
+            id: 2,
+            title: 'leak',
+            quantity: 1,
+            measurement: ' pcs',
+            isComplete: false
+          },
+          {
+            id: 3,
+            title: 'large carrot',
+            quantity: 1,
+            measurement: ' pcs',
+            isComplete: false
+          },
+          {
+            id: 4,
+            title: 'spinach',
+            quantity: 1,
+            measurement: ' large handful',
+            isComplete: false
+          },
+          {
+            id: 5,
+            title: 'bay leaves',
+            quantity: 5,
+            measurement: ' leaves',
+            isComplete: false
+          },
+          {
+            id: 6,
+            title: 'broccoli',
+            quantity: 250,
+            measurement: 'g',
+            isComplete: false
+          },
+          {
+            id: 7,
+            title: 'potatoes',
+            quantity: 3,
+            measurement: ' pcs',
+            isComplete: false
+          },
+          
+        ],
+        steps: [
+          {
+            id: 1,
+            action: "Cut up all the vegetables, roughly about the same thickness.",
+            duration: 5,
+            isComplete: false
+          },
+          {
+            id: 2,
+            action: "Add boiling water to sauce pan and place all vegetables (not spinach) and fish into steamer (if you don't have one, use a metal sieve), ensure you place the hard vegetables at the bottom and layer up, adding the bay leaves here and there. place lid on top and cook through on medium high heat",
+            duration: 13,
+            isComplete: false
+          },
+          {
+            id: 3,
+            action: "Add spinach on top, place lid on top and let cook",
+            duration: 2,
+            isComplete: false
+          },
+          {
+            id: 4,
+            action: "Dip everything on to a plate, drizzle with olive oil and season with salt an pepper",
+            duration: 2,
+            isComplete: false
+          },
+         
+        ],
+        tags:[
+          'beef', 'pasta', 'italian'
+        ],
+        isPublished: true,
+      },
     ],
   },
   getters:{
