@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row justify-content-center mt-3">
-      <div class="col-6">
+      <div class="col-12 col-md-6">
         <div class="input-group input-group-lg">
           <input
             v-model="search"
