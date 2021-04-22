@@ -187,7 +187,7 @@ export default new Vuex.Store({
           },
           {
             id: 4,
-            action: "Dip everything on to a plate, drizzle with olive oil and season with salt an pepper",
+            action: "Plate up, drizzle with olive oil and season with salt an pepper",
             duration: 2,
             isComplete: false
           },
