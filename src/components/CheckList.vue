@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="list">
-      <div class="col header yellow">Steps</div>
+      <div class="header">Steps</div>
       <div
         class="item"
         v-for="item in list"
         :key="item"
         @click="item.isComplete = !item.isComplete"
       >
-        <div class="check" style="width: 10%">
+        <div class="col-1 check">
           <transition name="fade">
             <span v-if="!item.isComplete" class="material-icons">
               radio_button_unchecked
@@ -17,7 +17,7 @@
           </transition>
         </div>
 
-        <div class="step-info">
+        <div class="col-11 step-info">
           {{ item.action }}
           <span v-if="item.duration">- {{ item.duration }} min aprox</span>
         </div>
@@ -50,7 +50,6 @@ export default {
 
 .step-info {
   text-align: left;
-  width: 90%;
 }
 
 .check:hover {

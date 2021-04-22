@@ -29,37 +29,15 @@ export default {
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
   min-height: 100vh;
 }
 
-@media (min-width: 575px) {
-  .row {
-    display: flex;
-  }
-  .col {
-    flex: 1;
-  }
-}
-
-@media (min-width: 750px) {
-  .row {
-    flex: 1 0 auto;
-    display: flex;
-  }
-  .col {
-    flex: 1;
-    padding: 0 10px;
-  }
-}
-
 .around {
-  justify-content: space-around;
+  justify-content: space-around !important;
 }
 
 .between {
-  justify-content: space-between;
+  justify-content: space-between !important;
 }
 
 .mt-1 {
@@ -158,5 +136,9 @@ export default {
 
 .list .item:nth-child(even) {
   background-color: rgba(0, 0, 0, 0.02);
+}
+
+.card {
+  border: 0 !important;
 }
 </style>

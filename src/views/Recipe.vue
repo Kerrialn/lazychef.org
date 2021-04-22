@@ -1,17 +1,20 @@
 <template>
   <div>
-    <div class="row between v-center">
-      <h1>{{ recipe.title }}</h1>
-      <h1>{{ recipe.duration }} min</h1>
+    <div class="d-flex between mb-3 mt-3">
+      <div class="h1">{{ recipe.title }}</div>
+      <div class="h1">{{ recipe.duration }} min</div>
     </div>
 
     <div class="row around">
-      <slider class="col" :images="recipe.images" />
-      <ingredients-list class="col" :ingredients="recipe.ingredients" />
+      <slider class="col-12 col-md-6 col-lg-6" :images="recipe.images" />
+      <ingredients-list
+        class="col-12 col-md-6 col-lg-6"
+        :ingredients="recipe.ingredients"
+      />
     </div>
 
     <div class="row">
-      <check-list class="col" :list="recipe.steps" />
+      <check-list class="col-12" :list="recipe.steps" />
     </div>
   </div>
 </template>

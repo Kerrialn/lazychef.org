@@ -4,10 +4,10 @@
       v-for="recipe in recipes"
       :key="recipe.id"
       tag="div"
-      class="col"
+      class="col-md-4"
       :to="{ name: 'Recipe', params: { slug: recipe.slug } }"
     >
-      <card v-if="recipe.isPublished" class="card" :recipe="recipe" />
+      <card v-if="recipe.isPublished" :recipe="recipe" />
     </router-link>
   </div>
 </template>

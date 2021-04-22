@@ -10,7 +10,7 @@ export default new Vuex.Store({
       {
         id: 1,
         slug: "pesto-meatballs",
-        title: "Pesto meatball in spinach sauce",
+        title: "Pesto meatballs in spinach sauce",
         description: "",
         duration: 15,
         image: require('.././assets/images/pesto-meatballs/1.jpg'),

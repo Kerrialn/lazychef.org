@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="list">
-      <div class="col header">Ingredients</div>
+      <div class="header">Ingredients</div>
       <div
         class="row v-center item"
         v-for="ingredient in ingredients"
         :key="ingredient"
         @click="ingredient.isComplete = !ingredient.isComplete"
       >
-        <div class="col">
+        <div class="col-md-3">
           <transition name="fade">
             <span v-if="!ingredient.isComplete" class="material-icons">
               radio_button_unchecked
@@ -16,7 +16,7 @@
             <span v-else class="material-icons green"> check_circle </span>
           </transition>
         </div>
-        <div class="col">
+        <div class="col-md-9">
           <div class="title">{{ ingredient.title }}</div>
           <div class="duration">
             {{ ingredient.quantity }}{{ ingredient.measurement }}

@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <div class="title">{{ recipe.title }}</div>
+    <div class="title">{{ recipe.title }} - {{ recipe.duration }} min</div>
     <img v-if="recipe.image" class="img" :src="recipe.image" />
   </div>
 </template>

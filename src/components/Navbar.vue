@@ -4,10 +4,8 @@
       <b>Lazy</b> <span class="text-white">Chef</span>
     </div>
     <div>
-      <router-link tag="a" class="nav-link" to="/" exact>Recipes</router-link>
-      <router-link tag="a" class="nav-link" to="/about" exact
-        >About</router-link
-      >
+      <router-link tag="a" class="navlink" to="/" exact>Recipes</router-link>
+      <router-link tag="a" class="navlink" to="/about" exact>About</router-link>
     </div>
   </div>
 </template>
