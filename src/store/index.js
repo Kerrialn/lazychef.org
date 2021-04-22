@@ -194,7 +194,7 @@ export default new Vuex.Store({
          
         ],
         tags:[
-          'beef', 'pasta', 'italian'
+          'fish', 'salmon', 'steamed', 'healthy', 'vegetables'
         ],
         isPublished: true,
       },

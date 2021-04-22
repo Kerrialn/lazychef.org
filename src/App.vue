@@ -141,4 +141,16 @@ export default {
 .card {
   border: 0 !important;
 }
+
+.form-control {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
 </style>
