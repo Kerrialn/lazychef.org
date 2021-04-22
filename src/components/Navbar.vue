@@ -1,6 +1,8 @@
 <template>
   <div class="nav">
-    <div class="brand-text"><b>Lazy</b> Chef</div>
+    <div class="brand-text">
+      <b>Lazy</b> <span class="text-white">Chef</span>
+    </div>
     <div>
       <router-link tag="a" class="nav-link" to="/" exact>Recipes</router-link>
       <router-link tag="a" class="nav-link" to="/about" exact
@@ -11,20 +13,25 @@
 </template>
 
 <style scoped>
+.text-white {
+  color: white;
+}
+
 .brand-text {
-  font-size: 18px;
+  font-size: 28px;
   padding-left: 20px;
 }
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #40aa61 !important;
   padding: 20px 0px;
 }
 .nav a {
   text-decoration: none;
-  color: black;
+  color: white;
   padding: 0 15px;
 }
 .nav a:hover {
