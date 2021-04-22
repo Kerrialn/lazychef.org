@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="d-flex between mb-3 mt-3">
-      <div class="h1">{{ recipe.title }}</div>
-      <div class="h1">{{ recipe.duration }} min</div>
+    <div class="mb-5 mt-3">
+      <div class="display-4">{{ recipe.title }}</div>
+      <div class="h4">{{ recipe.duration }} minutes</div>
     </div>
 
     <div class="row around">
