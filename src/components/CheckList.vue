@@ -8,7 +8,7 @@
         :key="item"
         @click="item.isComplete = !item.isComplete"
       >
-        <div class="col-1 check">
+        <div class="col-2 col-md-3 check">
           <transition name="fade">
             <span v-if="!item.isComplete" class="material-icons">
               radio_button_unchecked
@@ -17,7 +17,7 @@
           </transition>
         </div>
 
-        <div class="col-11 step-info">
+        <div class="col-10 col-md-9 step-info">
           {{ item.action }}
           <span v-if="item.duration">- {{ item.duration }} min aprox</span>
         </div>

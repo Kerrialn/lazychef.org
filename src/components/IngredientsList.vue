@@ -8,7 +8,7 @@
         :key="ingredient"
         @click="ingredient.isComplete = !ingredient.isComplete"
       >
-        <div class="col-md-3">
+        <div class="col-3 col-md-3">
           <transition name="fade">
             <span v-if="!ingredient.isComplete" class="material-icons">
               radio_button_unchecked
@@ -16,7 +16,7 @@
             <span v-else class="material-icons green"> check_circle </span>
           </transition>
         </div>
-        <div class="col-md-9">
+        <div class="col-9 col-md-9">
           <div class="title">{{ ingredient.title }}</div>
           <div class="duration">
             {{ ingredient.quantity }}{{ ingredient.measurement }}
