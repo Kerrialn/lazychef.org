@@ -47,7 +47,7 @@ export default new Vuex.Store({
             id: 4,
             title: 'spinach',
             quantity: 1,
-            measurement: 'large handful',
+            measurement: ' large handful',
             isComplete: false
           },
           {
