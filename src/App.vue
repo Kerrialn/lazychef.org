@@ -26,6 +26,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(0, 0, 0, 0.05);
+  min-height: 100vh;
 }
 
 .around {
@@ -34,6 +35,10 @@ export default {
 
 .between {
   justify-content: space-between !important;
+}
+
+.v-center {
+  align-items: center;
 }
 
 .mt-1 {
