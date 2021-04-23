@@ -53,7 +53,7 @@ export default new Vuex.Store({
           {
             id: 5,
             title: 'creame fresh',
-            quantity: 250,
+            quantity: 190,
             measurement: 'g',
             isComplete: false
           },
