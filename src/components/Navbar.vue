@@ -1,11 +1,15 @@
 <template>
   <div class="nav">
-    <div class="brand-text">
-      <b>Lazy</b> <span class="text-white">Chef</span>
-    </div>
-    <div>
-      <router-link tag="a" class="navlink" to="/" exact>Recipes</router-link>
-      <router-link tag="a" class="navlink" to="/about" exact>About</router-link>
+    <div class="container">
+      <div class="brand-text">
+        <b>Lazy</b> <span class="text-white">Chef</span>
+      </div>
+      <div>
+        <router-link tag="a" class="navlink" to="/" exact>Recipes</router-link>
+        <router-link tag="a" class="navlink" to="/about" exact
+          >About</router-link
+        >
+      </div>
     </div>
   </div>
 </template>

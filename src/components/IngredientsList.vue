@@ -14,7 +14,7 @@
           </div>
         </div>
       </div>
-      <transition-group name="list">
+      <transition-group name="fade" mode="out-in">
         <div
           class="item"
           v-for="ingredient in filteredIngredients"

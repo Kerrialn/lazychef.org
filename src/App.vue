@@ -28,10 +28,6 @@ export default {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.container {
-  min-height: 100vh;
-}
-
 .around {
   justify-content: space-around !important;
 }
@@ -109,7 +105,6 @@ export default {
 
 .list {
   border-radius: 5px;
-  background-color: white;
   margin-bottom: 20px;
 }
 
@@ -131,6 +126,7 @@ export default {
 
 .list .item {
   padding: 15px;
+  background-color: white;
 }
 
 .list .item:hover {
@@ -138,7 +134,7 @@ export default {
 }
 
 .list .item:nth-child(even) {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgba(255, 255, 255, 0.65);
 }
 
 .card {
