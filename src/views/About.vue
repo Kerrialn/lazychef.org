@@ -1,22 +1,19 @@
 <template>
   <div class="about">
-    <div class="row">
-      <div class="col">
-        <div class="w-50 mx-atuo">
-          <h1>What's my beef?</h1>
-          <p>
-            I've become exhausted of professional chefs writing pretenious cook
-            books and posting endless video tutorials, requiring expert
-            knowledge and equipment, making complex skills look easy. Alas, I
-            also want to eat healthily, without having to go to culinary school
-            to do so.
-          </p>
-          <h1>Mission</h1>
-          <p>
-            My mission is to bring you the easiest and lazist cooking methods
-            and techniques for healthy(ier) meals.
-          </p>
-        </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6 col-12">
+        <h1>What's my beef?</h1>
+        <p>
+          I've become exhausted of professional chefs writing pretenious cook
+          books and posting endless video tutorials, requiring expert knowledge
+          and equipment, making complex skills look easy. Alas, I also want to
+          eat healthily, without having to go to culinary school to do so.
+        </p>
+        <h1>Mission</h1>
+        <p>
+          My mission is to bring you the easiest and lazist cooking methods and
+          techniques for healthy(ier) meals.
+        </p>
       </div>
     </div>
   </div>

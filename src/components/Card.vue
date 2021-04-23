@@ -29,7 +29,6 @@
   font-weight: bold;
   font-size: 18px;
   padding: 20px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
 }
 
 .card .step {
