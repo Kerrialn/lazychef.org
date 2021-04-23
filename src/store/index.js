@@ -40,7 +40,7 @@ export default new Vuex.Store({
             id: 3,
             title: 'basil pesto',
             quantity: 2,
-            measurement: 'table sppons',
+            measurement: ' table sppons',
             isComplete: false
           },
           {
