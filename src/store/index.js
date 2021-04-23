@@ -25,8 +25,8 @@ export default new Vuex.Store({
           {
             id: 1,
             title: 'mince beef',
-            quantity: 1,
-            measurement: 'kg',
+            quantity: 500,
+            measurement: 'g',
             isComplete: false
           },
           {
