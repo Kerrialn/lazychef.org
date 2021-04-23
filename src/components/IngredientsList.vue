@@ -2,8 +2,8 @@
   <div>
     <div class="list">
       <div class="header">
-        <div>Ingredients</div>
-        <div>
+        <div class="w-50">Ingredients</div>
+        <div class="w-50">
           <div class="input-group">
             <input
               v-model="search"
@@ -63,7 +63,6 @@ export default {
 </script>
 
 <style>
-
 .material-icons {
   font-size: 30px;
 }
