@@ -120,6 +120,9 @@ export default {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header.yellow {
