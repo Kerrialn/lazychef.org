@@ -3,9 +3,10 @@
     <div class="nav">
       <div class="container">
         <div class="d-flex between v-center">
-          <div class="brand-text">
+          <router-link tag="div" class="brand-text" to="/" exact>
             <b>Lazy</b> <span class="text-white">Chef</span>
-          </div>
+          </router-link>
+
           <i
             @click="show = !show"
             class="menu-btn bi bi-list fs-2 text-white"
@@ -95,7 +96,12 @@ export default {
 .brand-text {
   font-size: 28px;
   padding-left: 20px;
+  color: #212529;
 }
+.brand-text:hover {
+  cursor: pointer;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
