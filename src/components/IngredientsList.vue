@@ -3,7 +3,7 @@
     <div class="list">
       <div class="header">Ingredients</div>
       <div
-        class="row v-center item"
+        class="item"
         v-for="ingredient in ingredients"
         :key="ingredient"
         @click="ingredient.isComplete = !ingredient.isComplete"
