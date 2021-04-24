@@ -14,6 +14,10 @@
           </div>
         </div>
       </div>
+      <div class="sub-header nav">
+        <div class="small">€{{ recipe.cost }} per serving</div>
+        <div class="small">serves {{ recipe.servings }} person</div>
+      </div>
       <transition-group name="fade" mode="out-in">
         <div
           class="item"
@@ -48,11 +52,11 @@ export default {
     };
   },
   props: {
-    ingredients: Array,
+    recipe: Object,
   },
   computed: {
     filteredIngredients() {
-      return this.ingredients.filter((ingredient) => {
+      return this.recipe.ingredients.filter((ingredient) => {
         return ingredient.title
           .toLowerCase()
           .includes(this.search.toLowerCase());
@@ -63,6 +67,14 @@ export default {
 </script>
 
 <style>
+.sub-header {
+  padding: 10px;
+  background-color: #40aa61;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
 .material-icons {
   font-size: 30px;
 }

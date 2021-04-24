@@ -11,7 +11,7 @@ export default new Vuex.Store({
         id: 1,
         slug: "pesto-meatballs",
         title: "Pesto meatballs in spinach sauce",
-        cost: 1.70,
+        cost: 1.20,
         description: "",
         duration: 15,
         image: require('.././assets/images/pesto-meatballs/1.jpg'),
@@ -21,12 +21,12 @@ export default new Vuex.Store({
             src: require('.././assets/images/pesto-meatballs/1.jpg'),
           }
         ],
-        serverings: 1,
+        servings: 1,
         ingredients:[
           {
             id: 1,
             title: 'mince beef',
-            quantity: 250,
+            quantity: 200,
             measurement: 'g',
             isComplete: false
           },
@@ -102,7 +102,7 @@ export default new Vuex.Store({
         id: 2,
         slug: "steamed-fish",
         title: "Steamed fish & vegetable rush",
-        cost: 2.00 ,
+        cost: 3.00 ,
         description: "",
         duration: 20,
         image: require('.././assets/images/steamed-fish/1.jpg'),
@@ -116,7 +116,7 @@ export default new Vuex.Store({
             src: require('.././assets/images/steamed-fish/2.jpg'),
           }
         ],
-        serverings: 1,
+        servings: 1,
         ingredients:[
           {
             id: 1,
@@ -206,6 +206,7 @@ export default new Vuex.Store({
         id: 3,
         slug: "pork-stir-fry",
         title: "Pork fillet stir fry",
+        cost: 1.7,
         description: "",
         duration: 15,
         image: require('.././assets/images/pork-stir-fry/4.jpg'),
@@ -227,7 +228,7 @@ export default new Vuex.Store({
             src: require('.././assets/images/pork-stir-fry/4.jpg'),
           }
         ],
-        serverings: 1,
+        servings: 1,
         ingredients:[
           {
             id: 1,

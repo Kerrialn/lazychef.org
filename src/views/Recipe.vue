@@ -7,10 +7,7 @@
 
     <div class="row around">
       <slider class="col-12 col-md-6 col-lg-6" :images="recipe.images" />
-      <ingredients-list
-        class="col-12 col-md-6 col-lg-6"
-        :ingredients="recipe.ingredients"
-      />
+      <ingredients-list class="col-12 col-md-6 col-lg-6" :recipe="recipe" />
     </div>
 
     <div class="row">
