@@ -19,7 +19,9 @@
         <router-link tag="div" class="menu-item" to="/" exact
           >Recipes</router-link
         >
-
+        <router-link tag="div" class="menu-item" to="/requirements" exact
+          >Requirements</router-link
+        >
         <router-link tag="div" class="menu-item" to="/about" exact
           >About</router-link
         >
