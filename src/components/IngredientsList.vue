@@ -18,7 +18,7 @@
         <div class="m-0">
           €{{ parseFloat(recipe.cost * recipe.servings).toFixed(2) }}
         </div>
-        <div class="input-group w-20">
+        <div class="input-group w-25">
           <span class="input-group-text" id="basic-addon1">
             <i class="bi bi-people"></i>
           </span>
