@@ -15,8 +15,20 @@
         </div>
       </div>
       <div class="sub-header nav">
-        <div class="small">€{{ recipe.cost }} per serving</div>
-        <div class="small">serves {{ recipe.servings }} person</div>
+        <div class="m-0">
+          €{{ parseFloat(recipe.cost * recipe.servings).toFixed(2) }}
+        </div>
+        <div class="input-group w-20">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="bi bi-people"></i>
+          </span>
+          <input
+            v-model="recipe.servings"
+            type="text"
+            class="form-control"
+            placeholder="servings"
+          />
+        </div>
       </div>
       <transition-group name="fade" mode="out-in">
         <div
@@ -34,7 +46,8 @@
           <div class="col-9 col-md-9">
             <div class="title">{{ ingredient.title }}</div>
             <div class="duration">
-              {{ ingredient.quantity }}{{ ingredient.measurement }}
+              {{ ingredient.quantity * recipe.servings
+              }}{{ ingredient.measurement }}
             </div>
           </div>
         </div>
@@ -67,11 +80,21 @@ export default {
 </script>
 
 <style>
+.input-group-text {
+  background-color: white;
+  border: 0;
+}
+
+.w-20 {
+  width: 20% !important;
+}
+
 .sub-header {
   padding: 10px;
   background-color: #40aa61;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: white;
 }
 

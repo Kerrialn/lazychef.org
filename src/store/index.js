@@ -129,14 +129,14 @@ export default new Vuex.Store({
             id: 2,
             title: 'leak',
             quantity: 1,
-            measurement: ' pcs',
+            measurement: null,
             isComplete: false
           },
           {
             id: 3,
             title: 'large carrot',
             quantity: 1,
-            measurement: ' pcs',
+            measurement: null,
             isComplete: false
           },
           {
@@ -164,7 +164,7 @@ export default new Vuex.Store({
             id: 7,
             title: 'small potatoes',
             quantity: 3,
-            measurement: ' pcs',
+            measurement: null,
             isComplete: false
           },
           
@@ -247,14 +247,14 @@ export default new Vuex.Store({
           {
             id: 3,
             title: 'pak choi',
-            quantity: 'half of one',
+            quantity: 1,
             measurement: '',
             isComplete: false
           },
           {
             id: 5,
             title: 'garlic',
-            quantity: 4,
+            quantity: 3,
             measurement: ' cloves',
             isComplete: false
           },
@@ -262,7 +262,7 @@ export default new Vuex.Store({
             id: 6,
             title: 'carrot',
             quantity: 1,
-            measurement: ' pc',
+            measurement: null,
             isComplete: false
           },
           {
