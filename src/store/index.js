@@ -41,7 +41,7 @@ export default new Vuex.Store({
             id: 3,
             title: 'basil pesto',
             quantity: 2,
-            measurement: ' tea sppons',
+            measurement: ' tea spoons',
             isComplete: false
           },
           {
@@ -75,13 +75,13 @@ export default new Vuex.Store({
           },
           {
             id: 3,
-            action: "While meatballs are cooking add boiling water to sauce pan, add in pasta, add a swig of olive oil, boild till cooked",
+            action: "While meatballs are cooking add boiling water to sauce pan, add in pasta, add a swig of olive oil, boil till cooked",
             duration: 5,
             isComplete: false
           },
           {
             id: 4,
-            action: "Give the meatballs a toss and in a blender (if you don't have one, just cut up finely) add spinach, creme fresh, salt, pepper and a sqweeze of lemon juice for good luck, blend till smooth.",
+            action: "Give the meatballs a toss and in a blender (if you don't have one, just cut up finely) add spinach, creme fresh, salt, pepper and a squeeze of lemon juice for good luck, blend till smooth.",
             duration: 5,
             isComplete: false
           },
@@ -296,19 +296,19 @@ export default new Vuex.Store({
           },
           {
             id: 2,
-            action: "Add boiling water to sauce pan and drop in the noodles on low heat stir occationally. Place wok or frying pan on high heat, add a good swig of olive oil, place in the pork and all veg (not pak choi and garlic) and half the soy sauce",
+            action: "Add boiling water to sauce pan and drop in the noodles on low heat stir occasionally. Place wok or frying pan on high heat, add a good swig of olive oil, place in the pork and all veg (not pak choi and garlic) and half the soy sauce",
             duration: 5,
             isComplete: false
           },
           {
             id: 3,
-            action: "Keep stiring the contents of the pan, crush in the garlic and add pak choi",
+            action: "Keep stirring the contents of the pan, crush in the garlic and add pak hoi",
             duration: 5,
             isComplete: false
           },
           {
             id: 4,
-            action: "Drain noodles cut up with randomlly scissors, add to the wok with the rest of the soy sauce, mix everything together and ensure is cooked through",
+            action: "Drain noodles cut up with randomly scissors, add to the wok with the rest of the soy sauce, mix everything together and ensure is cooked through",
             duration: 3,
             isComplete: false
           },
@@ -322,6 +322,109 @@ export default new Vuex.Store({
         ],
         tags:[
           'pork', 'noodles', 'asian', 'healthy', 'vegetables', 'feel good', 'comfort food', 'weekend', 'saturday'
+        ],
+        isPublished: true,
+      },
+
+      {
+        id: 4,
+        slug: "rosemary-grilled-chicken-thighs-with-thyme-potatoes",
+        title: "Rosemary grilled chicken thighs with thyme potatoes asparagus and avocado",
+        cost: 3.5,
+        description: "",
+        duration: 20,
+        image: require('.././assets/images/rosemary-grilled-chicken-thighs-with-thyme-potatoes/4.jpg'),
+        images:[
+          {
+            id: 1,
+            src: require('.././assets/images/rosemary-grilled-chicken-thighs-with-thyme-potatoes/1.jpg'),
+          },
+          {
+            id: 2,
+            src: require('.././assets/images/rosemary-grilled-chicken-thighs-with-thyme-potatoes/2.jpg'),
+          },
+          {
+            id: 3,
+            src: require('.././assets/images/rosemary-grilled-chicken-thighs-with-thyme-potatoes/3.jpg'),
+          },
+          {
+            id: 4,
+            src: require('.././assets/images/rosemary-grilled-chicken-thighs-with-thyme-potatoes/4.jpg'),
+          }
+        ],
+        servings: 1,
+        ingredients:[
+          {
+            id: 1,
+            title: 'Chicken thighs',
+            quantity: 3,
+            measurement: null,
+            isComplete: false
+          },
+          {
+            id: 2,
+            title: 'asparagus',
+            quantity: 5,
+            measurement: null,
+            isComplete: false
+          },
+          {
+            id: 3,
+            title: 'avocado',
+            quantity: 1,
+            measurement: null,
+            isComplete: false
+          },
+          {
+            id: 5,
+            title: 'new potatoes',
+            quantity: 5,
+            measurement: null,
+            isComplete: false
+          },
+          {
+            id: 6,
+            title: 'fresh rosemary',
+            quantity: 2,
+            measurement: ' sprigs',
+            isComplete: false
+          },
+          {
+            id: 7,
+            title: 'fresh thyme',
+            quantity: 2,
+            measurement: ' sprigs',
+            isComplete: false
+          }
+        ],
+        steps: [
+          {
+            id: 1,
+            action: "oven on at 180/200 degrees, season room temperature chicken thighs with olive oil, salt, pepper and rosemary, wack in a oven safe container and put in the oven and leave to cook through.",
+            duration: 20,
+            isComplete: false
+          },
+          {
+            id: 2,
+            action: "cut potatoes into quarters and place in steamer, after 10 min add the asparagus",
+            duration: 15,
+            isComplete: false
+          },
+          {
+            id: 3,
+            action: "cut avocado in half and remove skin with a spoon and cut into slices",
+            duration: 1,
+            isComplete: false
+          },
+          {
+            id: 3,
+            action: "ensure chicken is cooked thoroughly. Plate up and drizzle olive oil and thyme over potatoes and enjoy",
+            duration: null,
+            isComplete: false
+          },
+        ],
+        tags:[
+          'pork'
         ],
         isPublished: true,
       },
