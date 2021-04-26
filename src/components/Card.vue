@@ -43,6 +43,9 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  text-align: center;
 }
 
 .duration div {
