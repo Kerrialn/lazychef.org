@@ -11,7 +11,7 @@
     </div>
 
     <div class="row">
-      <check-list class="col-12" :list="recipe.steps" />
+      <check-list class="col-12" :recipe="recipe" />
     </div>
   </div>
 </template>

@@ -62,11 +62,15 @@ export default {
   data() {
     return {
       search: "",
+      warnings: {
+        portion: false,
+      },
     };
   },
   props: {
     recipe: Object,
   },
+  watch: {},
   computed: {
     filteredIngredients() {
       return this.recipe.ingredients.filter((ingredient) => {

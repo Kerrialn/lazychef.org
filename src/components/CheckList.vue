@@ -4,7 +4,7 @@
       <div class="header">Steps</div>
       <div
         class="item"
-        v-for="item in list"
+        v-for="item in recipe.steps"
         :key="item"
         @click="item.isComplete = !item.isComplete"
       >
@@ -19,7 +19,9 @@
 
         <div class="col-10 col-md-9 step-info">
           {{ item.action }}
-          <span v-if="item.duration">- {{ item.duration }} min aprox</span>
+          <span v-if="item.duration"
+            >- {{ item.duration * recipe.servings }} min aprox</span
+          >
         </div>
       </div>
     </div>
@@ -30,7 +32,7 @@
 export default {
   name: "CheckList",
   props: {
-    list: Array,
+    recipe: Object,
   },
 };
 </script>
