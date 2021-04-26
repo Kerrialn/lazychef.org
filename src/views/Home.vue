@@ -54,10 +54,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.card:hover {
-  cursor: pointer;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15) !important;
-  transition: all 0.5s ease-in-out;
-}
-</style>
+<style scoped></style>

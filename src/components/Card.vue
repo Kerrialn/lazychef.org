@@ -16,9 +16,18 @@
 <style scoped>
 .card {
   position: relative;
-  background-color: #ffffff;
+  background-color: transparent;
   border-radius: 5px;
   margin: 20px;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card:hover .img {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.5s ease-in-out;
 }
 
 .card .img {
@@ -27,16 +36,14 @@
   background-position: center center;
   margin: 0;
 }
+
 .card .body {
   padding: 20px;
 }
 .card .title {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  color: #000000;
-  padding: 20px;
-  white-space: nowrap;
-  overflow-x: hidden;
+  line-height: 1;
+  padding-bottom: 10px;
+  color: black;
 }
 
 .overlay-footer {
