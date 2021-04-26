@@ -424,7 +424,7 @@ export default new Vuex.Store({
           },
         ],
         tags:[
-          'pork'
+          'chicken', 'asparagus', 'avocado', 'thyme', 'grilled', 'thursday', 'healthy', 'cozy food'
         ],
         isPublished: true,
       },
