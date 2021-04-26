@@ -1,7 +1,15 @@
 <template>
   <div class="card">
-    <div class="title">{{ recipe.title }} - {{ recipe.duration }} min</div>
+    <div class="title">
+      {{ recipe.title }}
+    </div>
     <img v-if="recipe.image" class="img" :src="recipe.image" />
+    <div class="overlay-footer">
+      <span class="duration">
+        <div class="small">{{ recipe.duration }}</div>
+        <div class="small">min</div>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -26,9 +34,22 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   color: #000000;
-  font-weight: bold;
-  font-size: 18px;
   padding: 20px;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.overlay-footer {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.duration div {
+  line-height: 0.9;
+}
+.duration div:last-child {
+  font-size: 10px;
 }
 
 .card .step {

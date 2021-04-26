@@ -15,8 +15,8 @@
         </p>
 
         <p>
-          Ultimately I'm tired of the pretense. Home cooking isn't easy,
-          it's a skill that takes years to learn. You may have gathered, I'm no
+          Ultimately I'm tired of the pretense. Home cooking isn't easy, it's a
+          skill that takes years to learn. You may have gathered, I'm no
           professional chef and nor do I have a large kitchen and nor is it
           fully equipped.
         </p>
