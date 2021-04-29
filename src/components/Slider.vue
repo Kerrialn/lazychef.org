@@ -11,18 +11,8 @@
         />
       </transition-group>
       <div v-if="images.length > 1" class="controls">
-        <span
-          @click="previous"
-          :class="['material-icons', isPreviousDisabled ? 'disabled' : null]"
-        >
-          arrow_back_ios
-        </span>
-        <span
-          @click="next"
-          :class="['material-icons', isNextDisabled ? 'disabled' : null]"
-        >
-          arrow_forward_ios
-        </span>
+        <span @click="previous" class="material-icons"> arrow_back_ios </span>
+        <span @click="next" class="material-icons"> arrow_forward_ios </span>
       </div>
     </div>
   </div>

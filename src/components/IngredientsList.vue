@@ -23,6 +23,7 @@
             <i class="bi bi-people"></i>
           </span>
           <input
+            :disabled="timer.isStarted"
             v-model="recipe.servings"
             type="text"
             class="form-control"
@@ -34,7 +35,7 @@
         <div
           class="item"
           v-for="ingredient in filteredIngredients"
-          :key="ingredient"
+          :key="ingredient.id"
           @click="ingredient.isComplete = !ingredient.isComplete"
         >
           <div class="col-3 col-md-3">
@@ -43,8 +44,13 @@
             </span>
             <span v-else class="material-icons green"> check_circle </span>
           </div>
-          <div class="col-9 col-md-9">
-            <div class="title">{{ ingredient.title }}</div>
+          <div
+            class="col-9 col-md-9"
+            v-bind:class="{ complete: ingredient.isComplete }"
+          >
+            <div class="title">
+              {{ ingredient.title }}
+            </div>
             <div class="duration">
               {{ ingredient.quantity * recipe.servings
               }}{{ ingredient.measurement }}
@@ -57,6 +63,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "CheckList",
   data() {
@@ -72,6 +79,9 @@ export default {
   },
   watch: {},
   computed: {
+    ...mapGetters({
+      timer: "getTimer",
+    }),
     filteredIngredients() {
       return this.recipe.ingredients.filter((ingredient) => {
         return ingredient.title
@@ -84,6 +94,10 @@ export default {
 </script>
 
 <style>
+.complete {
+  color: gray;
+}
+
 .input-group-text {
   background-color: white;
   border: 0;
@@ -119,5 +133,39 @@ export default {
 
 .step-info .duration {
   font-size: 12px;
+}
+
+.list {
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.list .header {
+  font-size: 20px;
+  color: white;
+  background-color: #218347;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list .item {
+  padding: 15px;
+  background-color: white;
+}
+
+.list .item:hover {
+  cursor: pointer;
+}
+
+.list .item:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.header.yellow {
+  background-color: #40aa61 !important;
 }
 </style>

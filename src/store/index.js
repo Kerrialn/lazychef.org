@@ -1,10 +1,23 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import moment from "moment";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    timer:{
+      recipe: null,
+      startedAt: null,
+      finishAt: null,
+      isStarted: false,
+      countdown: null,
+      now: null,
+      intervals:{
+        countdown: undefined,
+        now: undefined
+      }
+    },
     recipe: null,
     recipes: [
       {
@@ -63,33 +76,57 @@ export default new Vuex.Store({
         steps: [
           {
             id: 1,
+            order: 1,
             action: "Add the pesto to minced meat, season with salt and pepper. Roll into small balls, about half the size of a ping pong ball",
-            duration: 4,
-            isComplete: false
+            duration: {
+              total: 4,
+              start: 0,
+            },
+            isComplete: false,
+            isActive: false
           },
           {
             id: 2,
+            order: 2,
             action: "Place meatballs into frying pan and drizzle with olive oil and put on medium high heat, cook through",
-            duration: 5,
-            isComplete: false
+            duration: {
+              total: 10,
+              start: 1,
+            },
+            isComplete: false,
+            isActive: false
           },
           {
             id: 3,
+            order: 3,
             action: "While meatballs are cooking add boiling water to sauce pan, add in pasta, add a swig of olive oil, boil till cooked",
-            duration: 5,
-            isComplete: false
+            duration: {
+              total: 10,
+              start: 5,
+            },
+            isComplete: false,
+            isActive: false
           },
           {
             id: 4,
+            order: 4,
             action: "Give the meatballs a toss and in a blender (if you don't have one, just cut up finely) add spinach, creme fresh, salt, pepper and a squeeze of lemon juice for good luck, blend till smooth.",
-            duration: 5,
-            isComplete: false
+            duration: {
+              total: 2,
+              start: 6,
+            },
+            isComplete: false,
+            isActive: false
           },
           {
-            id: 4,
+            id: 5,
             action: "Plate up and enjoy.",
-            duration: null,
-            isComplete: false
+            duration: {
+              total: 1,
+              start: 14,
+            },
+            isComplete: false,
+            isActive: false
           },
         ],
         tags:[
@@ -172,27 +209,47 @@ export default new Vuex.Store({
         steps: [
           {
             id: 1,
+            order: 1,
             action: "Cut up all the vegetables, roughly about the same thickness.",
-            duration: 5,
-            isComplete: false
+            duration: {
+              total: 5,
+              start: 0,
+            },
+            isComplete: false,
+            isActive: false
           },
           {
             id: 2,
+            order: 2,
             action: "Add boiling water to sauce pan and place all vegetables (not spinach) and fish into steamer (if you don't have one, use a metal sieve), ensure you place the hard vegetables at the bottom and layer up, adding the bay leaves here and there. place lid on top and cook through on medium high heat",
-            duration: 13,
-            isComplete: false
+            duration: {
+              total: 13,
+              start: 5,
+            },
+            isComplete: false,
+            isActive: false
           },
           {
             id: 3,
+            order: 3,
             action: "Add spinach on top, place lid on top and let cook",
-            duration: 2,
-            isComplete: false
+            duration: {
+              total: 2,
+              start: 18,
+            },
+            isComplete: false,
+            isActive: false
           },
           {
             id: 4,
+            order: 4,
             action: "Plate up, drizzle with olive oil and season with salt an pepper",
-            duration: 2,
-            isComplete: false
+            duration: {
+              total: 1,
+              start: 19,
+            },
+            isComplete: false,
+            isActive: false
           },
          
         ],
@@ -208,7 +265,7 @@ export default new Vuex.Store({
         title: "Pork fillet stir fry",
         cost: 1.7,
         description: "",
-        duration: 15,
+        duration: 20,
         image: require('.././assets/images/pork-stir-fry/4.jpg'),
         images:[
           {
@@ -290,33 +347,58 @@ export default new Vuex.Store({
         steps: [
           {
             id: 1,
+            order: 1,
             action: "Peel carrot and ginger, then cut up all the vegetables, roughly about the same thickness. (see images for reference)",
-            duration: 7,
-            isComplete: false
+            duration: {
+              total: 7,
+              start: 0
+            },
+            isComplete: false,
+            isActive: false
           },
           {
             id: 2,
+            order: 2,
             action: "Add boiling water to sauce pan and drop in the noodles on low heat stir occasionally. Place wok or frying pan on high heat, add a good swig of olive oil, place in the pork and all veg (not pak choi and garlic) and half the soy sauce",
-            duration: 5,
-            isComplete: false
+            duration: {
+              total: 5,
+              start: 7
+            },
+            isComplete: false,
+            isActive: false
           },
           {
             id: 3,
+            order: 3,
             action: "Keep stirring the contents of the pan, crush in the garlic and add pak hoi",
-            duration: 5,
-            isComplete: false
+            duration: {
+              total: 5,
+              start: 12,
+            },
+            isComplete: false,
+            isActive: false
           },
           {
             id: 4,
+            order: 4,
             action: "Drain noodles cut up with randomly scissors, add to the wok with the rest of the soy sauce, mix everything together and ensure is cooked through",
-            duration: 3,
-            isComplete: false
+            duration: {
+              total: 3,
+              start: 17,
+            },
+            isComplete: false,
+            isActive: false
           },
           {
             id: 5,
+            order: 5,
             action: "Bowl up, add more soy sauce to taste and enjoy.",
-            duration: null,
-            isComplete: false
+            duration: {
+              total: 1,
+              start: 19,
+            },
+            isComplete: false,
+            isActive: false
           },
          
         ],
@@ -356,7 +438,7 @@ export default new Vuex.Store({
         ingredients:[
           {
             id: 1,
-            title: 'Chicken thighs',
+            title: 'Small chicken thighs',
             quantity: 3,
             measurement: null,
             isComplete: false
@@ -400,27 +482,47 @@ export default new Vuex.Store({
         steps: [
           {
             id: 1,
-            action: "oven on at 180/200 degrees, season room temperature chicken thighs with olive oil, salt, pepper and rosemary, wack in a oven safe container and put in the oven and leave to cook through.",
-            duration: 20,
-            isComplete: false
+            order: 1,
+            action: "oven on at 190 degrees, season room temperature chicken thighs with olive oil, salt, pepper and rosemary, wack in a oven safe container and put in the oven and leave to cook through.",
+            duration: {
+              total: 20,
+              start: 0,
+            },
+            isComplete: false,
+            isActive: false
           },
           {
             id: 2,
+            order: 2,
             action: "cut potatoes into quarters and place in steamer, after 10 min add the asparagus",
-            duration: 15,
-            isComplete: false
+            duration: {
+              total: 10,
+              start: 10,
+            },
+            isComplete: false,
+            isActive: false
           },
           {
             id: 3,
+            order: 3,
             action: "cut avocado in half and remove skin with a spoon and cut into slices",
-            duration: 1,
-            isComplete: false
+            duration: {
+              total: 2,
+              start: 18,
+            },
+            isComplete: false,
+            isActive: false
           },
           {
-            id: 3,
+            id: 4,
+            order: 4,
             action: "ensure chicken is cooked thoroughly. Plate up and drizzle olive oil and thyme over potatoes and enjoy",
-            duration: null,
-            isComplete: false
+            duration: {
+              total: 1,
+              start: 19,
+            },
+            isComplete: false,
+            isActive: false
           },
         ],
         tags:[
@@ -437,19 +539,107 @@ export default new Vuex.Store({
     },
     getRecipe(state){
       return state.recipe
+    },
+    getTimer(state){
+      return state.timer
+    },
+    getTimerIsStarted(state){
+      return state.timer.isStarted
+    },
+    getTimerCountdown(state){
+      return state.timer.countdown
+    },
+    getTimerRecipe(state){
+      return state.timer.recipe
+    },
+    getTimerStartedAt(state){
+      return state.timer.startedAt
+    },
+    getTimerFinishAt(state){
+      return state.timer.finishAt
+    },
+    getTimerNow(state){
+      return state.timer.now
     }
   },
   actions:{
     getRecipe({commit}, slug){
      let recipe = this.state.recipes.filter((recipe => recipe.slug == slug));
      commit('setRecipe', recipe[0]);
-    }
+    },
+    startTimer({commit}) {
+      commit('setTimerRecipe', this.state.recipe)
+      commit('setTimerStartedAt', moment());
+      commit('setTimerNow');
+      commit('setTimerFinishAt', moment().add(this.state.recipe.duration, 'm') );
+      
+      if (!this.state.timer.isStarted) {
+        commit('setTimerIsStarted', true);
+        commit('setTimerCountdown', this.state.recipe.duration);
+        commit('setTimerNow', 0);
+      }
+    },
+    stopTimer({commit}) {
+
+      commit('setTimerNowInterval')
+      commit('setTimerCountdownInterval')
+
+       commit('setTimer', {
+          recipe: null,
+          startedAt: null,
+          finishAt: null,
+          isStarted: false,
+          countdown: null,
+          now: null,
+          intervals:{
+            countdown: undefined,
+            now: undefined
+          }
+       });
+ 
+    },
   },
   mutations: {
     setRecipe(state, recipe){
       state.recipe =  recipe
+    },
+    setTimer(state, timer){
+      state.timer =  timer
+    },
+    setTimerIsStarted(state, isStarted){
+      state.timer.isStarted =  isStarted
+    },
+    setTimerCountdown(state, duration){
+      state.timer.countdown = moment.duration(duration, 'm');
+      state.timer.intervals.countdown = setInterval(() => {
+        if(state.timer.countdown > 0){
+          state.timer.countdown =  state.timer.countdown.subtract(1, "s");
+        }
+      }, 1000);
+    },
+    setTimerRecipe(state, recipe){
+      state.timer.recipe =  recipe
+    },
+    setTimerStartedAt(state, startedAt ){
+      state.timer.startedAt =  startedAt
+    },
+    setTimerFinishAt(state, finishedAt ){
+      state.timer.finishedAt =  finishedAt
+    },
+    setTimerNow(state){
+    state.timer.intervals.now =  setInterval(() => {
+        state.timer.now = moment()
+      }, 1000);
+    },
+    setTimerNowInterval(state){
+      clearInterval(state.timer.intervals.now)
+    },
+    setTimerCountdownInterval(state){
+      clearInterval(state.timer.intervals.countdown)
     }
   },
 
   modules: {},
 });
+
+

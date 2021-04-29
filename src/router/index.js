@@ -27,7 +27,7 @@ const routes = [
     path: "/recipe/:slug",
     name: "Recipe",
     component: Recipe,
-  }
+  },
 ];
 
 const router = new VueRouter({

@@ -2,7 +2,7 @@
   <div id="app">
     <navbar />
     <div class="container">
-      <router-view />
+      <router-view :key="$route.fullPath" />
     </div>
   </div>
 </template>
@@ -27,6 +27,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(0, 0, 0, 0.05);
   min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
 }
 
 .around {
@@ -106,40 +110,6 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
-}
-
-.list {
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.list .header {
-  font-size: 20px;
-  color: white;
-  background-color: #218347;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header.yellow {
-  background-color: #40aa61 !important;
-}
-
-.list .item {
-  padding: 15px;
-  background-color: white;
-}
-
-.list .item:hover {
-  cursor: pointer;
-}
-
-.list .item:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.65);
 }
 
 .card {

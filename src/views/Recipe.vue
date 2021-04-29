@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mb-5 mt-3">
-      <div class="display-4">{{ recipe.title }}</div>
+      <div v-if="recipe.title" class="display-4">{{ recipe.title }}</div>
       <div class="h4">{{ recipe.duration }} minutes</div>
     </div>
 
@@ -11,18 +11,18 @@
     </div>
 
     <div class="row">
-      <check-list class="col-12" :recipe="recipe" />
+      <steps class="col-12" :recipe="recipe" />
     </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-import CheckList from "../components/CheckList.vue";
+import Steps from "../components/Steps.vue";
 import IngredientsList from "../components/IngredientsList.vue";
 import Slider from "../components/Slider.vue";
 export default {
-  components: { Slider, CheckList, IngredientsList },
+  components: { Slider, Steps, IngredientsList },
   name: "Recipe",
   data() {
     return {
@@ -36,7 +36,6 @@ export default {
   },
   mounted() {
     this.$store.dispatch("getRecipe", this.slug);
-    this.recipe.isFull = true;
   },
 };
 </script>
