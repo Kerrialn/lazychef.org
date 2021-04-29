@@ -6,7 +6,7 @@
           <div>Steps</div>
           <div><timer /></div>
         </div>
-        <div class="sub-header-two">
+        <div class="sub-header-two" v-if="!timer.isStarted">
           Need help with timing? Press play to follow along.
         </div>
         <step
