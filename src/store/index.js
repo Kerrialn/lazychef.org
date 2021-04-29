@@ -533,8 +533,8 @@ export default new Vuex.Store({
 
       {
         id: 5,
-        slug: "chicken-noodles",
-        title: "Chicken noodles",
+        slug: "garlic-ginger-chicken-noodles",
+        title: "Garlic Ginger Chicken Noodles",
         cost: 1.5,
         description: "",
         duration: 15,
