@@ -1,0 +1,44 @@
+      {
+        id: 'id  number',
+        slug: "",
+        title: "",
+        cost: 3.5,
+        description: "",
+        duration: 20,
+        image: require('.././assets/images/<----title--->/4.jpg'),
+        images:[
+          {
+            id: 1,
+            src: require('.././assets/images/<----title--->/1.jpg'),
+          },
+        ],
+        servings: 1,
+        ingredients:[
+          {
+            id: 1,
+            title: '',
+            quantity: 0,
+            measurement: null,
+            isComplete: false
+          },
+
+        ],
+        steps: [
+          {
+            id: 1,
+            order: 1,
+            action: "",
+            duration: {
+              total: 20,
+              start: 0,
+            },
+            isComplete: false,
+            isActive: false
+          },
+      
+        ],
+        tags:[
+          'chicken', 'noodles', 'healthy', 'tuesday'
+        ],
+        isPublished: true,
+      },

@@ -531,6 +531,115 @@ export default new Vuex.Store({
         isPublished: true,
       },
 
+      {
+        id: 5,
+        slug: "Chicken noodles",
+        title: "chicken-noodles",
+        cost: 1.5,
+        description: "",
+        duration: 15,
+        image: require('.././assets/images/chicken-noodles/1.jpg'),
+        images:[
+          {
+            id: 1,
+            src: require('.././assets/images/chicken-noodles/1.jpg'),
+          },
+        ],
+        servings: 1,
+        ingredients:[
+          {
+            id: 1,
+            title: 'thin egg noodles',
+            quantity: 2,
+            measurement: ' nests',
+            isComplete: false
+          },
+          {
+            id: 2,
+            title: 'chicken',
+            quantity: 1,
+            measurement: ' breast',
+            isComplete: false
+          },
+          {
+            id: 3,
+            title: 'ginger',
+            quantity: 20,
+            measurement: 'g',
+            isComplete: false
+          },
+          {
+            id: 4,
+            title: 'garlic',
+            quantity: 1,
+            measurement: ' clove',
+            isComplete: false
+          },
+          {
+            id: 5,
+            title: 'fresh coriander',
+            quantity: 1,
+            measurement: ' good pinch',
+            isComplete: false
+          },
+          {
+            id: 6,
+            title: 'fresh parsley',
+            quantity: 1,
+            measurement: ' good pinch',
+            isComplete: false
+          },
+          {
+            id: 7,
+            title: 'spring onion',
+            quantity: 1,
+            measurement: ' stalk',
+            isComplete: false
+          }
+        ],
+        steps: [
+          {
+            id: 1,
+            order: 1,
+            action: "Cut up all the greens and place into container, then cut up the chicken into 2 cm slices",
+            duration: {
+              total: 5,
+              start: 0,
+            },
+            isComplete: false,
+            isActive: false
+          },
+          {
+            id: 1,
+            order: 1,
+            action: "Place boiling water in two sauce pans, add half the ginger and the noodle nests to one. Place the steamer into the other pan and add the chicken and put the lid on, let cook on medium low heat",
+            duration: {
+              total: 7,
+              start: 6,
+            },
+            isComplete: false,
+            isActive: false
+          },
+          {
+            id: 1,
+            order: 1,
+            action: "Pour the water from the steamed chicken pan into a bowl, add the noodles and chicken, place the greens on top. add sliced chili if you like it spicy. Enjoy.",
+            duration: {
+              total: 3,
+              start: 12,
+            },
+            isComplete: false,
+            isActive: false
+          },
+      
+        ],
+        tags:[
+          'chicken', 'noodles', 'healthy', 'tuesday'
+        ],
+        isPublished: true,
+      },
+
+
     ],
   },
   getters:{
@@ -571,11 +680,11 @@ export default new Vuex.Store({
       commit('setTimerRecipe', this.state.recipe)
       commit('setTimerStartedAt', moment());
       commit('setTimerNow');
-      commit('setTimerFinishAt', moment().add(this.state.recipe.duration, 'm') );
+      commit('setTimerFinishAt', moment().add(this.state.timer.recipe.duration, 'm') );
       
       if (!this.state.timer.isStarted) {
         commit('setTimerIsStarted', true);
-        commit('setTimerCountdown', this.state.recipe.duration);
+        commit('setTimerCountdown', this.state.timer.recipe.duration * this.state.timer.recipe.servings );
         commit('setTimerNow', 0);
       }
     },
