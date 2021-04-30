@@ -36,11 +36,21 @@ export default {
   props: {
     step: Object,
   },
+  data() {
+    return {
+      audio: {
+        start: new Audio(require("../assets/audio/beep.mp3")),
+        end: new Audio(require("../assets/audio/end.mp3")),
+      },
+    };
+  },
   watch: {
     now() {
       if (this.timer.isStarted) {
+        this.isStart;
         this.isActive();
         this.isComplete();
+        this.isEnd;
       }
 
       if (this.timer.countdown <= 0) {
@@ -62,6 +72,23 @@ export default {
     now() {
       return this.timer.now;
     },
+    isStart() {
+      let check = moment(this.stepStartTime).isSame(this.timer.now.format());
+      if (check) {
+        this.playStartBeep();
+      }
+      return check;
+    },
+    isEnd() {
+      let check = moment(this.timer.finishedAt.format()).isSame(
+        this.timer.now.format()
+      );
+      console.log(this.timer.finishedAt.format());
+      if (check) {
+        this.playEndBeep();
+      }
+      return check;
+    },
     stepStartTime() {
       return moment(this.timer.startedAt)
         .add(this.step.duration.start, "m")
@@ -78,6 +105,16 @@ export default {
     ...mapActions({
       stopTimer: "stopTimer",
     }),
+    playStartBeep() {
+      this.audio.start.volume = 0.5;
+      this.audio.start.loop = false;
+      this.audio.start.play();
+    },
+    playEndBeep() {
+      this.audio.end.volume = 0.2;
+      this.audio.end.loop = false;
+      this.audio.end.play();
+    },
     toggleComplete() {
       if (!this.timer.isStarted) {
         this.step.isComplete = !this.step.isComplete;

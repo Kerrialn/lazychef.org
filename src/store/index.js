@@ -91,7 +91,7 @@ export default new Vuex.Store({
             action: "Place meatballs into frying pan and drizzle with olive oil and put on medium high heat, cook through",
             duration: {
               total: 10,
-              start: 1,
+              start: 4,
             },
             isComplete: false,
             isActive: false
@@ -638,7 +638,6 @@ export default new Vuex.Store({
         ],
         isPublished: true,
       },
-
 
     ],
   },
