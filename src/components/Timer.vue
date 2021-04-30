@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div v-if="show" class="start-delay">{{ delay }}</div>
+    <transition name="fade">
+      <div v-if="show" class="start-delay">{{ delay }}</div>
+    </transition>
     <div v-if="!timer.isStarted || recipe === timerRecipe">
       <div class="d-flex align-items-center justify-content-between">
         <div v-if="timer.countdown" class="duration">
@@ -81,7 +83,7 @@ export default {
   background-color: #218347;
   padding: 100px;
   border-radius: 3px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
   transform: translate(calc(50vw - 50%), calc(50vh - 50%));
   z-index: 1000;
   width: 50vh;

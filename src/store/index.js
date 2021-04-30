@@ -623,7 +623,7 @@ export default new Vuex.Store({
           {
             id: 1,
             order: 1,
-            action: "Pour the water from the steamed chicken pan into a bowl, add the noodles and chicken, place the greens on top. add sliced chili if you like it spicy. Enjoy.",
+            action: "Pour the water from the steamed chicken pan into a bowl, add the noodles and chicken (top up with water from the noodle as need be), place the greens on top. add sliced chili if you like it spicy. Enjoy.",
             duration: {
               total: 3,
               start: 12,
