@@ -100,6 +100,7 @@ export default {
   overflow-x: hidden;
 }
 .duration {
+  font-weight: bold;
   font-size: 18px;
   margin-right: 20px;
 }

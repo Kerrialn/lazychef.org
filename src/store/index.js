@@ -639,6 +639,133 @@ export default new Vuex.Store({
         isPublished: true,
       },
 
+      {
+        id: 6,
+        slug: "rose-pesto-meatballs",
+        title: "Meatballs in a garlic tomato sauce",
+        cost: 1.75,
+        description: "",
+        duration: 15,
+        image: require('.././assets/images/rose-pesto-meatballs/1.jpg'),
+        images:[
+          {
+            id: 1,
+            src: require('.././assets/images/rose-pesto-meatballs/1.jpg'),
+          },
+        ],
+        servings: 1,
+        ingredients:[
+          {
+            id: 1,
+            title: 'minced beef',
+            quantity: 200,
+            measurement: 'g',
+            isComplete: false
+          },
+          {
+            id: 2,
+            title: 'red pesto',
+            quantity: 2,
+            measurement: ' tea spoons',
+            isComplete: false
+          },
+          {
+            id: 3,
+            title: 'Fusilli pasta',
+            quantity: 150,
+            measurement: 'g',
+            isComplete: false
+          },
+          {
+            id: 4,
+            title: 'parsley',
+            quantity: 1,
+            measurement: ' good pinch',
+            isComplete: false
+          },
+          {
+            id: 5,
+            title: 'dried oregano',
+            quantity: 2,
+            measurement: ' tea spoons',
+            isComplete: false
+          },
+          {
+            id: 6,
+            title: 'thick tomato purée',
+            quantity: 1,
+            measurement: 'tea spoon',
+            isComplete: false
+          },
+          {
+            id: 7,
+            title: 'tomato ',
+            quantity: 1,
+            measurement: ' clove',
+            isComplete: false
+          },
+          {
+            id: 8,
+            title: 'garlic',
+            quantity: 1,
+            measurement: ' clove',
+            isComplete: false
+          },
+        ],
+        steps: [
+          {
+            id: 1,
+            order: 1,
+            action: "Mix the pesto and oregano with the miced beef then roll into small balls (roughly half the size of a ping pong ball), place into frying pan, drizzle with a little olive oil and turn on medium high heat, leave to cook",
+            duration: {
+              total: 14,
+              start: 0,
+            },
+            isComplete: false,
+            isActive: false
+          },
+          {
+            id: 2,
+            order: 2,
+            action: "Place boiling water into sauce pan, chuck in the pasta",
+            duration: {
+              total: 10,
+              start: 5,
+            },
+            isComplete: false,
+            isActive: false
+          },
+          {
+            id: 3,
+            order: 3,
+            action: "Add sliced garlic to the meatballs, when garlic is golden, add the tomato passata & tomato purée, turn down the heat to low, mix all together and let simmer",
+            duration: {
+              total: 2,
+              start: 12,
+            },
+            isComplete: false,
+            isActive: false
+          },
+          {
+            id: 4,
+            order: 4,
+            action: "Plate up and season with salt, pepper and top with parsley. If your feeling checky grate some parmesan on top. Enjoy",
+            duration: {
+              total: 1,
+              start: 14,
+            },
+            isComplete: false,
+            isActive: false
+          },
+      
+        ],
+        tags:[
+          'beef', 'meatballs', 'comfort', 'friday'
+        ],
+        isPublished: true,
+      },
+
+
     ],
   },
   getters:{

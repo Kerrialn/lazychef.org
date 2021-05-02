@@ -31,10 +31,6 @@
   margin: 20px;
 }
 
-.card:hover {
-  cursor: pointer;
-}
-
 .card:hover .img {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   transition: all 0.5s ease-in-out;

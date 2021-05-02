@@ -6,14 +6,16 @@
           <div>Steps</div>
           <div><timer /></div>
         </div>
-        <div class="sub-header-two" v-if="!timer.isStarted">
-          Need help with timing? Press play to follow along.
-        </div>
+        <transition name="fade">
+          <div class="sub-header-two" v-if="!timer.isStarted">
+            Need help with timing? Press play to follow along.
+          </div>
+        </transition>
         <step
-          class="item"
           v-for="step in recipe.steps"
           :key="step.id"
           :step="step"
+          :class="['item', { pointer: !timer.isStarted }]"
         />
       </div>
     </div>
@@ -88,10 +90,6 @@ export default {
   justify-content: space-between;
 }
 
-.list .item:hover {
-  cursor: pointer;
-}
-
 .list .item:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.65);
 }
@@ -100,7 +98,7 @@ export default {
   background-color: #40aa61 !important;
 }
 
-.check:hover {
+.pointer:hover {
   cursor: pointer;
 }
 </style>

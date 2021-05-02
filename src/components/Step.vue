@@ -156,4 +156,11 @@ export default {
 .complete {
   color: gray;
 }
+
+.green {
+  color: green;
+}
+.material-icons {
+  font-size: 30px;
+}
 </style>
