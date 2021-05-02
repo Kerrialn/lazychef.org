@@ -694,7 +694,7 @@ export default new Vuex.Store({
             id: 6,
             title: 'thick tomato purée',
             quantity: 1,
-            measurement: 'tea spoon',
+            measurement: ' tea spoon',
             isComplete: false
           },
           {
