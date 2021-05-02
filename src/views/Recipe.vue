@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mb-5 mt-3">
-      <div v-if="recipe.title" class="display-4">{{ recipe.title }}</div>
+      <div v-if="recipe.title" class="display-5">{{ recipe.title }}</div>
       <div class="h4">{{ recipe.duration }} minutes</div>
     </div>
 
