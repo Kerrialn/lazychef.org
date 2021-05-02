@@ -3,7 +3,14 @@
     <div class="title">
       {{ recipe.title }}
     </div>
-    <img v-if="recipe.image" class="img" :src="recipe.image" />
+
+    <progressive-img
+      v-if="recipe.image"
+      :placeholder="recipe.image"
+      class="img"
+      :src="recipe.image"
+    />
+
     <div class="overlay-footer">
       <span class="duration">
         <div class="small">{{ recipe.duration }}</div>
@@ -22,6 +29,7 @@
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.7);
   text-align: center;
+  z-index: 10;
 }
 
 .card {
@@ -41,6 +49,7 @@
   object-fit: cover;
   background-position: center center;
   margin: 0;
+  z-index: 5;
 }
 
 .card .body {
@@ -59,6 +68,7 @@
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   text-align: center;
+  z-index: 10;
 }
 
 .duration div {
@@ -76,7 +86,6 @@
 <script>
 export default {
   name: "Card",
-
   props: {
     recipe: Object,
   },
