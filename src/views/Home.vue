@@ -46,6 +46,7 @@ export default {
       return this.recipes.filter((recipe) => {
         return (
           recipe.title.toLowerCase().includes(this.search.toLowerCase()) ||
+          recipe.duration == parseInt(this.search) ||
           recipe.tags.includes(this.search.toLowerCase())
         );
       });
