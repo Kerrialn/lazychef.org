@@ -699,9 +699,9 @@ export default new Vuex.Store({
           },
           {
             id: 7,
-            title: 'tomato ',
-            quantity: 1,
-            measurement: ' clove',
+            title: 'tomato passata',
+            quantity: 200,
+            measurement: 'g',
             isComplete: false
           },
           {
