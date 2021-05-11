@@ -765,6 +765,148 @@ export default new Vuex.Store({
         isPublished: true,
       },
 
+      {
+        id: 7,
+        slug: "pellea-ish",
+        title: "Pelleaish",
+        cost: 2.0,
+        description: "",
+        duration: 15,
+        image: require('.././assets/images/pellea-ish/1.jpg'),
+        images:[
+          {
+            id: 1,
+            src: require('.././assets/images/pellea-ish/1.jpg'),
+          },
+          {
+            id: 2,
+            src: require('.././assets/images/pellea-ish/2.jpg'),
+          },
+        ],
+        servings: 1,
+        ingredients:[
+          {
+            id: 1,
+            title: 'Prawns or mixed seafood',
+            quantity: 200,
+            measurement: 'g',
+            isComplete: false
+          },
+          {
+            id: 2,
+            title: 'long grain rice',
+            quantity: 150,
+            measurement: 'g',
+            isComplete: false
+          },
+          {
+            id: 3,
+            title: 'Broccoli',
+            quantity: 100,
+            measurement: 'g',
+            isComplete: false
+          },
+          {
+            id: 4,
+            title: 'Peas',
+            quantity: 100,
+            measurement: 'g',
+            isComplete: false
+          },
+          {
+            id: 5,
+            title: 'Carrot',
+            quantity: 1,
+            measurement: null,
+            isComplete: false
+          },
+          {
+            id: 6,
+            title: 'Spinach',
+            quantity: 1,
+            measurement: ' large handful',
+            isComplete: false
+          },
+          {
+            id: 7,
+            title: 'dry wine wine',
+            quantity: 50,
+            measurement: ' ml',
+            isComplete: false
+          },
+          {
+            id: 8,
+            title: 'Fresh thyme',
+            quantity: 1,
+            measurement: ' sprig',
+            isComplete: false
+          },
+          {
+            id: 9,
+            title: 'Cayenne pepper',
+            quantity: 1,
+            measurement: ' teaspoon',
+            isComplete: false
+          },
+          {
+            id: 10,
+            title: 'Paprika',
+            quantity: 1,
+            measurement: ' teaspoon',
+            isComplete: false
+          },
+        ],
+        steps: [
+          {
+            id: 1,
+            order: 1,
+            action: "Add 300 ml of boiling water to a sauce pan, stick on medium heat and add the rice, lid on. Then cut carrots roughly in to 2 cm chunks and broccoli, each steam in to quarters",
+            duration: {
+              total: 12,
+              start: 0,
+            },
+            isComplete: false,
+            isActive: false
+          },
+          {
+            id: 2,
+            order: 2,
+            action: "Place wok or large frying pan on medium high heat, add prawns, Cayenne pepper and Paprika and toss around a bit then add the Broccoli, Peas and Carrot. Continuously toss the pan.",
+            duration: {
+              total: 6,
+              start: 6,
+            },
+            isComplete: false,
+            isActive: false
+          },
+          {
+            id: 3,
+            order: 3,
+            action: "turn pan to low heat and add wine, thyme and spinach. Lid off rice, don't drain, tip straight into pan. mix all together and let simmer for remaining time.",
+            duration: {
+              total: 3,
+              start: 13,
+            },
+            isComplete: false,
+            isActive: false
+          },
+          {
+            id: 4,
+            order: 4,
+            action: "Plate up, squeeze of lemon on top and enjoy.",
+            duration: {
+              total: 1,
+              start: 15,
+            },
+            isComplete: false,
+            isActive: false
+          },
+        ],
+        tags:[
+          'pellea', 'spanish', 'fast', 'friday', 'feel good'
+        ],
+        isPublished: true,
+      },
 
     ],
   },
