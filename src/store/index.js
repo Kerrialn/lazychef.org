@@ -953,7 +953,7 @@ export default new Vuex.Store({
           {
             id: 4,
             title: 'Mayonnaise',
-            quantity: 2/3,
+            quantity: 3,
             measurement: ' table spoons',
             isComplete: false
           },
