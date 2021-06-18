@@ -1,15 +1,15 @@
 <template>
   <div class="card">
-    <div class="title">
-      {{ recipe.title }}
-    </div>
-
     <progressive-img
       v-if="recipe.image"
       :placeholder="recipe.image"
       class="img"
       :src="recipe.image"
     />
+
+    <div class="title">
+      {{ recipe.title }}
+    </div>
 
     <div class="overlay-footer">
       <span class="duration">
@@ -22,17 +22,14 @@
 
 <style scoped>
 .title {
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  top: 10px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  font-size: 18px;
   text-align: center;
-  z-index: 10;
+  line-height: 1.2;
 }
 
 .card {
+  background-color: transparent;
   position: relative;
   background-color: transparent;
   border-radius: 5px;
@@ -40,8 +37,7 @@
 }
 
 .card:hover .img {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-  transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .card .img {
@@ -63,8 +59,8 @@
 
 .overlay-footer {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  top: 10px;
+  right: 10px;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   text-align: center;
