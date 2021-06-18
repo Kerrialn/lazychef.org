@@ -908,6 +908,108 @@ export default new Vuex.Store({
         isPublished: true,
       },
 
+
+      {
+        id: 8,
+        slug: "tuna-avo-rice",
+        title: "Tuna Avo Rice",
+        cost: 1.5,
+        description: "",
+        duration: 15,
+        image: require('.././assets/images/tuna-avo-rice/1.jpg'),
+        images:[
+          {
+            id: 1,
+            src: require('.././assets/images/tuna-avo-rice/1.jpg'),
+          },
+          {
+            id: 2,
+            src: require('.././assets/images/tuna-avo-rice/2.jpg'),
+          },
+        ],
+        servings: 1,
+        ingredients:[
+          {
+            id: 1,
+            title: 'Tuna Chucks',
+            quantity: 1,
+            measurement: ' tin',
+            isComplete: false
+          },
+          {
+            id: 2,
+            title: 'Avocado',
+            quantity: 1,
+            measurement: ' pc',
+            isComplete: false
+          },
+          {
+            id: 3,
+            title: 'Rice',
+            quantity: 100,
+            measurement: ' g',
+            isComplete: false
+          },
+          {
+            id: 4,
+            title: 'Mayonnaise',
+            quantity: 2/3,
+            measurement: ' table spoons',
+            isComplete: false
+          },
+        ],
+        steps: [
+          {
+            id: 1,
+            order: 1,
+            action: "Place boiling water in to sauce pan add rice. (ratio 2 to 1) place lid on top and leave",
+            duration: {
+              total: 12,
+              start: 0,
+            },
+            isComplete: false,
+            isActive: false
+          },
+          {
+            id: 2,
+            order: 2,
+            action: "Open tuna and drain brine, place into bowel add mayonnaise, salt and pepper, mixed together",
+            duration: {
+              total: 2,
+              start: 9,
+            },
+            isComplete: false,
+            isActive: false
+          },
+          {
+            id: 3,
+            order: 3,
+            action: "slice avocado, use image as reference.",
+            duration: {
+              total: 1,
+              start: 11,
+            },
+            isComplete: false,
+            isActive: false
+          },
+          {
+            id: 4,
+            order: 3,
+            action: "Drain water from rice, place into bowel and add 2/3 table spoons of tuna on top. add avocado and 2/3 table spoons of tuna. Enjoy!",
+            duration: {
+              total: 1,
+              start: 11,
+            },
+            isComplete: false,
+            isActive: false
+          },
+        ],
+        tags:[
+          'avocado', 'quick', 'fast', 'healthy', 'monday'
+        ],
+        isPublished: true,
+      },
+
     ],
   },
   getters:{
