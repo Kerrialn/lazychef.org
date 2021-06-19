@@ -25,7 +25,7 @@
   padding: 20px;
   font-size: 18px;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.3 !important;
 }
 
 .card {
